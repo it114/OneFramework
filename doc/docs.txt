@@ -1,0 +1,9 @@
+
+EventBus document
+https://github.com/greenrobot/EventBus/blob/master/HOWTO.md
+http://www.cnblogs.com/angeldevil/p/3715934.html
+
+
+
+http://jakewharton.github.io/butterknife/
+http://jakewharton.github.io/butterknife/ide-idea.html

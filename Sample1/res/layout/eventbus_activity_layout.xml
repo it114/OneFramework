@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="PostThread == Default" android:id="@+id/btn_PostThread"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="MainThread" android:id="@+id/btn_MainThread"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="BackgroundThread" android:id="@+id/btn_BackgroundThread"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Async" android:id="@+id/btn_Async"/>
+
+</LinearLayout>
