@@ -11,7 +11,6 @@ public class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
     }
 
-
     @Override
     public void onStart() {
         super.onStart();

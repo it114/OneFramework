@@ -1,5 +1,6 @@
 package com.it114.android.oneframework.core.http;
 
+import com.it114.android.oneframework.core.model.UserModel;
 import com.loopj.android.http.RequestParams;
 
 /**
@@ -19,8 +20,9 @@ public class UserApi extends OneApi {
     public static void login(String userName,String password,HttpRequestHandler handler){
         RequestParams params = getRequestParams();
         params.put("password",password);
-        params.put("username",userName);
-        get(false, 0, makeUrl(URI_USER_LOGIN), params, handler);
+        params.put("username", userName);
+        UserModel userModel = new UserModel();
+        get(false, 0, makeUrl(URI_USER_LOGIN), params, handler,userModel);
     }
 
     /**

@@ -3,6 +3,8 @@ package com.it114.android.oneframework.core.http;
 import com.it114.android.oneframework.core.OneApplication;
 import com.it114.android.oneframework.core.data.Config;
 import com.it114.android.oneframework.core.data.cache.HttpCacheManager;
+import com.it114.android.oneframework.core.model.BaseModel;
+import com.it114.android.oneframework.core.model.DataModel;
 import com.it114.android.oneframework.core.model.HttpCache;
 import com.it114.android.oneframework.core.util.LogUtil;
 import com.it114.android.oneframework.core.util.NetUtil;
@@ -65,7 +67,7 @@ public class OneApi {
      * @param params ∑√Œ ≤Œ ˝
      * @param handler
      */
-    public static void get(boolean useCache,long cacheTime,String url,RequestParams params, final HttpRequestHandler  handler){
+    public static void get(boolean useCache,long cacheTime,String url,RequestParams params, final HttpRequestHandler  handler, final DataModel dataModel){
         HttpCache cache = null;
         if(useCache) {
             cache = HttpCacheManager.get(url, params);
@@ -87,7 +89,13 @@ public class OneApi {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
                 handler.onFinish();
-                handler.onSuccess(responseString);
+                try {
+                    dataModel.parse(responseString);
+                    handler.onSuccess(dataModel);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    handler.onFailure(-1,"parse error");
+                }
             }
         });
     }

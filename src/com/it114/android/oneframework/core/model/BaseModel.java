@@ -1,6 +1,8 @@
 package com.it114.android.oneframework.core.model;
 
 import android.widget.Toast;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.it114.android.oneframework.core.OneApplication;
 import com.it114.android.oneframework.core.R;
 import org.json.JSONObject;
@@ -24,7 +26,7 @@ public  abstract class BaseModel implements Serializable {
 
     public void parse(String jsonObject) throws Exception {
         JSONObject object = new JSONObject(jsonObject);
-        if(object!=null){
+        if(object!=null) {
             this.msg = object.optString("msg");
             this.code = object.optInt("code");
             parseModel(object);
