@@ -16,9 +16,7 @@
 
 package com.loopj.android.http;
 
-
-
-import com.zijiayou360.app.android.BuildConfig;
+import com.it114.android.oneframework.core.BuildConfig;
 
 import java.io.UnsupportedEncodingException;
 

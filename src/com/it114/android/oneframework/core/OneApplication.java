@@ -68,14 +68,14 @@ public class OneApplication extends Application  {
                     .memoryCache(new WeakMemoryCache())
                     .diskCache(new LruDiskCache(cacheDir,new Md5FileNameGenerator(),500))
                     .denyCacheImageMultipleSizesInMemory()
-                    .threadPoolSize(3)//Ïß³Ì³ØÄÚ¼ÓÔØµÄÊıÁ¿
+                    .threadPoolSize(3)//çº¿ç¨‹æ± å†…åŠ è½½çš„æ•°é‡
                     .threadPriority(Thread.NORM_PRIORITY - 2)
-                    .memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)) // You can pass your own memory cache implementation/Äã¿ÉÒÔÍ¨¹ı×Ô¼ºµÄÄÚ´æ»º´æÊµÏÖ
+                    .memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)) // You can pass your own memory cache implementation/ä½ å¯ä»¥é€šè¿‡è‡ªå·±çš„å†…å­˜ç¼“å­˜å®ç°
                     .memoryCacheSize(2 * 1024 * 1024)
                     .discCacheSize(50 * 1024 * 1024)
-                    .discCacheFileNameGenerator(new Md5FileNameGenerator())//½«±£´æµÄÊ±ºòµÄURIÃû³ÆÓÃMD5 ¼ÓÃÜ
+                    .discCacheFileNameGenerator(new Md5FileNameGenerator())//å°†ä¿å­˜çš„æ—¶å€™çš„URIåç§°ç”¨MD5 åŠ å¯†
                     .tasksProcessingOrder(QueueProcessingType.LIFO)
-                    .discCacheFileCount(100) //»º´æµÄÎÄ¼şÊıÁ¿
+                    .discCacheFileCount(100) //ç¼“å­˜çš„æ–‡ä»¶æ•°é‡
                             //.discCache(new UnlimitedDiscCache(cacheDir))
                     .defaultDisplayImageOptions(options);
         } catch (IOException e) {
@@ -89,9 +89,9 @@ public class OneApplication extends Application  {
 
     public void setDebugModel(boolean debugModel){
         if(debugModel) {
-            Config.showLogcat = true;
+            Config.debug = true;
         } else {
-            Config.showLogcat = false;
+            Config.debug = false;
         }
     }
 }

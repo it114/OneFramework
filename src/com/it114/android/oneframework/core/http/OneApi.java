@@ -27,8 +27,8 @@ public class OneApi {
 
     private static void get(RequestParams params,String url, AsyncHttpResponseHandler responseHandler) {
         if(!NetUtil.isOpenNetwork()) {
-            //·µ»ØÊı¾İ¿â»º´æ
-            //String content = HttpCacheManager.get(url,params);
+            //è¿”å›æ•°æ®åº“ç¼“å­˜
+//            String content = HttpCacheManager.get(url,params);
             return;
         }
         LogUtil.d(TAG, params.toString());
@@ -37,7 +37,7 @@ public class OneApi {
 
     private static void post(RequestParams params,String url,AsyncHttpResponseHandler responseHandler) {
         if(!NetUtil.isOpenNetwork()){
-            //·µ»ØÊı¾İ¿â»º´æ
+            //è¿”å›æ•°æ®åº“ç¼“å­˜
             return ;
         }
         LogUtil.d(TAG, params.toString());
@@ -60,19 +60,20 @@ public class OneApi {
 
 
     /**
-     * getÇëÇó
-     * @param useCache ÊÇ·ñÊ¹ÓÃ»º´æ
-     * @param cacheTime »º´æÊ±¼ä£ºµ¥Î»Ãë
-     * @param url ·ÃÎÊµØÖ·
-     * @param params ·ÃÎÊ²ÎÊı
+     * getè¯·æ±‚
+     * @param useCache æ˜¯å¦ä½¿ç”¨ç¼“å­˜
+     * @param cacheTime ç¼“å­˜æ—¶é—´ï¼šå•ä½ç§’
+     * @param url è®¿é—®åœ°å€
+     * @param params è®¿é—®å‚æ•°
      * @param handler
+     * @param dataModel
      */
     public static void get(boolean useCache,long cacheTime,String url,RequestParams params, final HttpRequestHandler  handler, final DataModel dataModel){
         HttpCache cache = null;
         if(useCache) {
             cache = HttpCacheManager.get(url, params);
             if(cache!=null){
-                if(cache.updateTime+cacheTime*1000 < System.currentTimeMillis()){ //×ß»º´æÂß¼­
+                if(cache.updateTime+cacheTime*1000 < System.currentTimeMillis()){ //èµ°ç¼“å­˜é€»è¾‘
                     SafeHandler.onSuccess(handler,cache.content);
                     handler.onFinish();
                     return;

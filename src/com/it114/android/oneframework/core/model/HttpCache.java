@@ -12,7 +12,7 @@ public class HttpCache extends BaseModel{
 
 
 	@Override
-	public boolean parseSuc() {
+	public boolean parseSuccess() {
 		return false;
 	}
 

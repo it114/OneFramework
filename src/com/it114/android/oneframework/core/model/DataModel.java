@@ -7,7 +7,7 @@ import org.json.JSONObject;
  */
 public class DataModel extends BaseModel {
     @Override
-    public boolean parseSuc() {
+    public boolean parseSuccess() {
         return false;
     }
 

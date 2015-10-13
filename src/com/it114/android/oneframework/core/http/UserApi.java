@@ -1,5 +1,6 @@
 package com.it114.android.oneframework.core.http;
 
+import com.it114.android.oneframework.core.model.DataModel;
 import com.it114.android.oneframework.core.model.UserModel;
 import com.loopj.android.http.RequestParams;
 
@@ -29,7 +30,7 @@ public class UserApi extends OneApi {
      * use cache example
      * @param handler
      */
-    public static void getUserList(HttpRequestHandler handler){
-       get(true,5*60,makeUrl(URI_USER_RPOFIE),getRequestParams(),handler);
+    public static void getUserList(HttpRequestHandler handler, DataModel dataModel){
+       get(true,5*60,makeUrl(URI_USER_RPOFIE),getRequestParams(),handler,dataModel);
     }
 }

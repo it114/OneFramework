@@ -11,7 +11,7 @@ public class UserModel extends DataModel {
     public String username;
 
     @Override
-    public boolean parseSuc() {
+    public boolean parseSuccess() {
         return false;
     }
 

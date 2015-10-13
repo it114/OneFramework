@@ -7,5 +7,6 @@ public abstract class HttpRequestHandler<E>  {
     }
     public void onSuccess(E data, int totalPages, int currentPage){}
     public void onFailure(int statusCode,String error){}
+    public void onFailure(String error){}
     public void onFinish(){}
 }
