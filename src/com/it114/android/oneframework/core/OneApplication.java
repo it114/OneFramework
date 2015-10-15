@@ -89,9 +89,9 @@ public class OneApplication extends Application  {
 
     public void setDebugModel(boolean debugModel){
         if(debugModel) {
-            Config.showLogcat = true;
+            Config.debug = true;
         } else {
-            Config.showLogcat = false;
+            Config.debug = false;
         }
     }
 }

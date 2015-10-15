@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sample1</string>
+    <string name="contentDescription">contentDescription</string>
+    <string name="nickname">昵称</string>
+    <string name="hint_login_input_name">输入用户名</string>
+    <string name="hint_login_password">密码</string>
+    <string name="login">登陆</string>
+    <string name="agree_xieyi">同意注册协议</string>
+    <string name="hint_login_input_password">输入密码</string>
 </resources>

@@ -30,6 +30,7 @@ public class UserApi extends OneApi {
      * @param handler
      */
     public static void getUserList(HttpRequestHandler handler){
-       get(true,5*60,makeUrl(URI_USER_RPOFIE),getRequestParams(),handler);
+        UserModel userModel = new UserModel();
+       get(true,5*60,makeUrl(URI_USER_RPOFIE),getRequestParams(),handler,userModel);
     }
 }

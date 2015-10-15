@@ -8,7 +8,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 public class SafeHandler {
     public static <E> void onFailure (HttpRequestHandler<E> handler, String error){
         try{
-            handler.onFailure(error);
+            handler.onFailure(-1,error);
         } catch (Exception e){
             e.printStackTrace();
         }

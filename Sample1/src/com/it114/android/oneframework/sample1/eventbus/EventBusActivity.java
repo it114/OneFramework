@@ -6,7 +6,7 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.it114.android.oneframework.core.ui.BaseActivity;
+import com.it114.android.oneframework.core.ui.activity.BaseActivity;
 import com.it114.android.oneframework.sample1.R;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
