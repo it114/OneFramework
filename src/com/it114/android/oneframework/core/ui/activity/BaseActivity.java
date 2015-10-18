@@ -3,34 +3,22 @@ package com.it114.android.oneframework.core.ui.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import butterknife.ButterKnife;
-import de.greenrobot.event.EventBus;
 
-public class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity{
 
-    public static enum ACTIVITY_STATE  {
-        IDLE, //Œ¥ π”√
-        CREATE,
-        START,
-        RESUME,
-        PAUSE,
-        STOP,
-        DESTROY,
-        NOT_ACTIVITY,//∑«activity
-    }
+    public ActivityCommon activityState = new ActivityStateImpl();
 
-    protected ACTIVITY_STATE activityState = ACTIVITY_STATE.IDLE;
-
-    public ACTIVITY_STATE getActivityState(){
-        return activityState;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
-        activityState = ACTIVITY_STATE.CREATE;
+        activityState.create(savedInstanceState);
+        init(savedInstanceState);
     }
+
+    protected abstract void init(Bundle savedInstanceState);
 
     protected int getLayoutId() {
         return -1;
@@ -39,36 +27,45 @@ public class BaseActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-        activityState = ACTIVITY_STATE.START;
+        activityState.start();
+
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        activityState = ACTIVITY_STATE.STOP;
+        activityState.stop();
+
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        activityState = ACTIVITY_STATE.START;
+        activityState.restart();
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        activityState = ACTIVITY_STATE.RESUME;
+        activityState.resume();
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        activityState = ACTIVITY_STATE.PAUSE;
+        activityState.pause();
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        activityState = ACTIVITY_STATE.DESTROY;
+        activityState.destroy();
     }
+
+
+
+
 }

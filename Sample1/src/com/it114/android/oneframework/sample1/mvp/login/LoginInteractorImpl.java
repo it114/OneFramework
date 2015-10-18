@@ -8,7 +8,7 @@ import android.text.TextUtils;
  */
 public class LoginInteractorImpl implements LoginInteractor  {
     @Override
-    public void login(final String userName, final String password, final LoginLinstner listener) {
+    public void login(final String userName, final String password, final LoginListener listener) {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

@@ -26,8 +26,15 @@ public class LoginActivity  extends BaseFragmentActivity implements LoginView{
     EditText etPassword;
 
     private LoginPresenter loginPresenter;
+
+    @Override
+    protected void init(Bundle savedInstanceState) {
+
+    }
+
     @Override
     protected int getLayoutId() {
+
         loginPresenter = new LoginPresenterImpl(this);
         return R.layout.login_activity_layout;
     }

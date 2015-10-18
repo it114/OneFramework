@@ -26,14 +26,14 @@ public class Presenter {
     }
 
     /**
-     * Êı¾İ³õÊ¼»¯£¬ÔÚUIÏß³ÌÔËĞĞ
+     * æ•°æ®åˆå§‹åŒ–ï¼Œåœ¨UIçº¿ç¨‹è¿è¡Œ
      */
     private void initData(){
 
     }
 
     /**
-     * Êı¾İ³õÊ¼»¯ÔÚ×ÓÏß³ÌÔËĞĞ
+     * æ•°æ®åˆå§‹åŒ–åœ¨å­çº¿ç¨‹è¿è¡Œ
      */
     private void initDoInBackground() {
         new Thread(new Runnable() {
@@ -46,14 +46,14 @@ public class Presenter {
     }
 
     /**
-     * ºóÌ¨ÈÎÎñ£¬Ö´ĞĞÔÚºóÌ¨Ïß³Ì
+     * åå°ä»»åŠ¡ï¼Œæ‰§è¡Œåœ¨åå°çº¿ç¨‹
      */
     protected void doTask(){
 
     }
 
     /**
-     * ºóÌ¨ÈÎÎñÍê³É£¬Ö´ĞĞÔÚUIÏß³Ì
+     * åå°ä»»åŠ¡å®Œæˆï¼Œæ‰§è¡Œåœ¨UIçº¿ç¨‹
      */
     protected void doTaskFinish(){
 

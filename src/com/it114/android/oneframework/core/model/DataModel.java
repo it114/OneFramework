@@ -15,4 +15,5 @@ public class DataModel extends BaseModel {
     void parseModel(JSONObject object) throws Exception {
 
     }
+
 }

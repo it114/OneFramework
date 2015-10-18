@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_size_22">22.0sp</dimen>
+    <dimen name="ui_size_50">50.0dip</dimen>
+</resources>

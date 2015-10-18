@@ -11,7 +11,7 @@ import java.io.File;
 public class FileUtil {
 
     /**
-     * 得到app缓存文件夹，优先使用外部存储设备
+     * 寰楀埌app缂撳瓨鏂囦欢澶癸紝浼樺厛浣跨敤澶栭儴瀛樺偍璁惧
      * @return
      */
     public static File getCacheDir(){

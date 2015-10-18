@@ -12,9 +12,9 @@ import java.io.Serializable;
 /**
  * Created by andy on 10/12/2015.
  *
- * »ùÀà½âÎö¡£×¢ÒâÄúµÄÊı¾İ¸ñÊ½±ØĞëÊÇÏÂÃæÕâ¸ö¸ñÊ½µÄ²Å¿ÉÒÔÖ±½ÓÓÃÕâ¸ömodel
+ * åŸºç±»è§£æã€‚æ³¨æ„æ‚¨çš„æ•°æ®æ ¼å¼å¿…é¡»æ˜¯ä¸‹é¢è¿™ä¸ªæ ¼å¼çš„æ‰å¯ä»¥ç›´æ¥ç”¨è¿™ä¸ªmodel
  * {"code":1,"msg":"success","data":"{----}"}
- * ²»ÊÇÈçÉÏ¸ñÊ½µÄÇë×ÔĞĞ¸ù¾İÄúµÄ¸ñÊ½À´Ğ´»ùÀàµÄ½âÎö
+ * ä¸æ˜¯å¦‚ä¸Šæ ¼å¼çš„è¯·è‡ªè¡Œæ ¹æ®æ‚¨çš„æ ¼å¼æ¥å†™åŸºç±»çš„è§£æ
  *
  */
 public  abstract class BaseModel implements Serializable {
@@ -44,7 +44,7 @@ public  abstract class BaseModel implements Serializable {
     abstract void parseModel(JSONObject object) throws Exception;
 
     /**
-     * Êı¾İ·µ»ØÊÇ·ñ³É¹¦
+     * æ•°æ®è¿”å›æ˜¯å¦æˆåŠŸ
      * @return
      */
     public boolean dataSuc(){
@@ -52,7 +52,7 @@ public  abstract class BaseModel implements Serializable {
     }
 
     /**
-     * ·şÎñÆ÷·µ»ØµÄjsonÖĞµÄmsgÊı¾İ
+     * æœåŠ¡å™¨è¿”å›çš„jsonä¸­çš„msgæ•°æ®
      * @return
      */
     public String modelMessage(){

@@ -28,6 +28,7 @@ public class SupportFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mLayoutInflater = inflater;
         mRootView = mLayoutInflater.inflate(getFragmentLayout(), container, false);
+        createPresenters();
         initWidgets(mRootView);
         initOther();
         if (mPresenter != null) {
@@ -36,10 +37,12 @@ public class SupportFragment extends Fragment {
         return mRootView;
     }
 
+    /**
+     * 其他业务初始化
+     */
     protected void initOther() {
 
     }
-
 
     protected int getFragmentLayout() {
         return 0;
@@ -85,9 +88,11 @@ public class SupportFragment extends Fragment {
 
     @Override
     public void onDetach() {
+        if (mPresenter != null) {
+            mPresenter.detach();
+        }
         super.onDetach();
     }
-
 
 
 

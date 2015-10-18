@@ -32,6 +32,11 @@ public class EventBusActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
+    @Override
+    protected void init(Bundle savedInstanceState) {
+
+    }
+
     @OnClick(R.id.btn_PostThread)
     public void onPostThreadClick(){
         EventBus.getDefault().post(new PostThreadEvent("hello post thread !"));

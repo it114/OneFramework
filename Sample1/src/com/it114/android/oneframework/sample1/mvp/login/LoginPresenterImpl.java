@@ -3,7 +3,7 @@ package com.it114.android.oneframework.sample1.mvp.login;
 /**
  * Created by andy on 10/15/2015.
  */
-public class LoginPresenterImpl implements LoginPresenter ,LoginLinstner{
+public class LoginPresenterImpl implements LoginPresenter ,LoginListener {
 
 
     LoginView loginView;
