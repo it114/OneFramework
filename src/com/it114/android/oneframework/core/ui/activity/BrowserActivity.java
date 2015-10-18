@@ -40,33 +40,27 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-public class BrowserActivity extends BaseActivity {
+/**
+ * 扩展成一个小型的app内部的浏览器，支持前进和后退
+ */
+public abstract class  BrowserActivity extends BaseActivity {
     String mUrl;
     public static final String URL = "url";
     ProgressBar mProgressBar;
     WebView mWebView;
-    ImageButton mBackBtn;
-    TextView mTitleBtn;
-    ImageButton mActionBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
         mUrl = getIntent().getStringExtra(URL);
         checkUrl();
         initWidgets();
     }
 
-    @Override
-    protected void init(Bundle savedInstanceState) {
-
-    }
-
     private void checkUrl() {
         if (TextUtils.isEmpty(mUrl)) {
-            Toast.makeText(this," invaild url !",1).show();
+            Toast.makeText(this," invaild url !",Toast.LENGTH_LONG).show();
             finish();
         }
         if (mUrl.startsWith("www")) {
@@ -76,47 +70,35 @@ public class BrowserActivity extends BaseActivity {
 
     @SuppressLint("SetJavaScriptEnabled")
     private void initWidgets() {
-//        mBackBtn = (ImageButton) findViewById(ResFinder.getId("umeng_comm_title_back_btn"));
-//        mBackBtn.setOnClickListener(new OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-//        mTitleBtn = (TextView) findViewById(ResFinder.getId("umeng_comm_title_tv"));
-//        mTitleBtn.setText(ResFinder.getString("umeng_comm_url_detail"));
-//        mActionBtn = (ImageButton) findViewById(ResFinder.getId("umeng_comm_title_setting_btn"));
-//        mActionBtn.setVisibility(View.GONE);
-//
-//        mProgressBar = (ProgressBar) findViewById(ResFinder.getId("umeng_comm_load_url_bar"));
-//
-//        // 初始化webview
-//        mWebView = (WebView) findViewById(ResFinder.getId("umeng_comm_webview"));
-//        mWebView.getSettings().setJavaScriptEnabled(true);
-//        mWebView.getSettings().setLoadsImagesAutomatically(true);// 设置可以自动加载图片
-//        mWebView.setHorizontalScrollBarEnabled(false);// 设置水平滚动条
-//        mWebView.setVerticalScrollBarEnabled(false);// 设置竖直滚动条
-//        mWebView.setWebViewClient(new WebViewClient() {
-//            @Override
-//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//                WebSettings settings = mWebView.getSettings();
-//                settings.setBuiltInZoomControls(true);
-//                view.loadUrl(url);
-//                return true;
-//            }
-//        });
-//
-//        mWebView.setWebChromeClient(new WebChromeClient() {
-//            @Override
-//            public void onProgressChanged(WebView view, int newProgress) {
-//                mProgressBar.setVisibility(View.VISIBLE);
-//                mProgressBar.setProgress(newProgress);
-//                if (newProgress == 100) {
-//                    mProgressBar.setVisibility(View.GONE);
-//                }
-//            }
-//        });
-//        mWebView.loadUrl(mUrl);
+        mProgressBar = (ProgressBar) findViewById(getProgressBarId());
+        mWebView = (WebView) findViewById(getWebViewId());
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setLoadsImagesAutomatically(true);// 设置可以自动加载图片
+        mWebView.setHorizontalScrollBarEnabled(false);// 设置水平滚动条
+        mWebView.setVerticalScrollBarEnabled(false);// 设置竖直滚动条
+        mWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                WebSettings settings = mWebView.getSettings();
+                settings.setBuiltInZoomControls(true);
+                view.loadUrl(url);
+                return true;
+            }
+        });
+        mWebView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                mProgressBar.setVisibility(View.VISIBLE);
+                mProgressBar.setProgress(newProgress);
+                if (newProgress == 100) {
+                    mProgressBar.setVisibility(View.GONE);
+                }
+            }
+        });
+        mWebView.loadUrl(mUrl);
     }
+
+    public abstract int getProgressBarId() ;
+
+    public abstract int getWebViewId();
 }

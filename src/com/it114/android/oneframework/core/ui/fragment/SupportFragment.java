@@ -14,7 +14,7 @@ import com.it114.android.oneframework.core.ui.presenter.BaseFragmentPresenter;
 /**
  * Created by andy on 10/15/2015.
  */
-public class SupportFragment extends Fragment {
+public abstract class SupportFragment extends Fragment {
 
     protected LayoutInflater mLayoutInflater;
     protected View mRootView;
@@ -30,7 +30,7 @@ public class SupportFragment extends Fragment {
         mRootView = mLayoutInflater.inflate(getFragmentLayout(), container, false);
         createPresenters();
         initWidgets(mRootView);
-        initOther();
+        init();
         if (mPresenter != null) {
             mPresenter.attach(getActivity());
         }
@@ -40,13 +40,9 @@ public class SupportFragment extends Fragment {
     /**
      * 其他业务初始化
      */
-    protected void initOther() {
+    protected abstract void init();
 
-    }
-
-    protected int getFragmentLayout() {
-        return 0;
-    }
+    protected abstract  int getFragmentLayout();
 
     protected void initWidgets(View mRootView) {
         ButterKnife.bind(this, mRootView);

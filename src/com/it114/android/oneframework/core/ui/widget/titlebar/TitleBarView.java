@@ -16,6 +16,8 @@ public interface TitleBarView {
 
     public void initTitleBarWithBackgroundImage(int resImg);
 
+    public void initTitleBarWithBackgroundColor(int resColor);
+
     public void initRightText(String rightText);
 
     public void initRightImage(int resImg);

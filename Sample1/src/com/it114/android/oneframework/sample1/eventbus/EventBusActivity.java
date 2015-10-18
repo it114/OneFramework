@@ -37,6 +37,11 @@ public class EventBusActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
     @OnClick(R.id.btn_PostThread)
     public void onPostThreadClick(){
         EventBus.getDefault().post(new PostThreadEvent("hello post thread !"));

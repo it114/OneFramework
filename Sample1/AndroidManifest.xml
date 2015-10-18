@@ -4,7 +4,7 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="8"/>
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="com.it114.android.oneframework.core.OneApplication">
         <activity android:name=".mvp.login.LoginActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -12,7 +12,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvp.main.MainActivity"></activity>
-        <activity android:name=".mvp.main.TitleBarActivity"></activity>
+        <activity android:name=".mvp.titlebar.TitleBarActivity"></activity>
+        <activity android:name=".mvp.fragment.MyFragmentActivity"></activity>
+        <activity android:name=".mvp.adapter.AdapterActivity"></activity>
+        <activity android:name=".mvp.webview.WebViewActivity"></activity>
     </application>
 
 </manifest>

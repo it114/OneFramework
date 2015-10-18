@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class EventBusActivity$$ViewBinder<T extends com.it114.android.oneframework.sample1.eventbus.EventBusActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131165184, "field 'btnPostThread' and method 'onPostThreadClick'");
-    target.btnPostThread = finder.castView(view, 2131165184, "field 'btnPostThread'");
+    view = finder.findRequiredView(source, 2131165188, "field 'btnPostThread' and method 'onPostThreadClick'");
+    target.btnPostThread = finder.castView(view, 2131165188, "field 'btnPostThread'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -18,8 +18,8 @@ public class EventBusActivity$$ViewBinder<T extends com.it114.android.oneframewo
           target.onPostThreadClick();
         }
       });
-    view = finder.findRequiredView(source, 2131165185, "field 'btnMainThread' and method 'onMainThread'");
-    target.btnMainThread = finder.castView(view, 2131165185, "field 'btnMainThread'");
+    view = finder.findRequiredView(source, 2131165189, "field 'btnMainThread' and method 'onMainThread'");
+    target.btnMainThread = finder.castView(view, 2131165189, "field 'btnMainThread'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,8 +28,8 @@ public class EventBusActivity$$ViewBinder<T extends com.it114.android.oneframewo
           target.onMainThread();
         }
       });
-    view = finder.findRequiredView(source, 2131165186, "field 'btnBackgroundThread' and method 'onBackgroundThread'");
-    target.btnBackgroundThread = finder.castView(view, 2131165186, "field 'btnBackgroundThread'");
+    view = finder.findRequiredView(source, 2131165190, "field 'btnBackgroundThread' and method 'onBackgroundThread'");
+    target.btnBackgroundThread = finder.castView(view, 2131165190, "field 'btnBackgroundThread'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -38,8 +38,8 @@ public class EventBusActivity$$ViewBinder<T extends com.it114.android.oneframewo
           target.onBackgroundThread();
         }
       });
-    view = finder.findRequiredView(source, 2131165187, "field 'btnAsync' and method 'onAsync'");
-    target.btnAsync = finder.castView(view, 2131165187, "field 'btnAsync'");
+    view = finder.findRequiredView(source, 2131165191, "field 'btnAsync' and method 'onAsync'");
+    target.btnAsync = finder.castView(view, 2131165191, "field 'btnAsync'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

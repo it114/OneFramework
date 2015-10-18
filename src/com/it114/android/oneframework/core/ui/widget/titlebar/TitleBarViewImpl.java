@@ -93,6 +93,16 @@ public class TitleBarViewImpl implements TitleBarView {
     }
 
     @Override
+    public void initTitleBarWithBackgroundColor(int resColor) {
+        this.imgTitleBarBg.setVisibility(View.VISIBLE);
+        if(resColor >0 ) {
+            this.imgTitleBarBg.setBackgroundColor(resColor);
+        } else {
+            LogUtil.w(TAG," invalid resColor .");
+        }
+    }
+
+    @Override
     public void initRightText(String rightText) {
         this.tvRightTextBtn.setText(rightText);
         this.tvRightTextBtn.setVisibility(View.VISIBLE);

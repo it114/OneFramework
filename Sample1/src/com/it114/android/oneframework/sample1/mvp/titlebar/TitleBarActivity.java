@@ -1,4 +1,4 @@
-package com.it114.android.oneframework.sample1.mvp.main;
+package com.it114.android.oneframework.sample1.mvp.titlebar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -13,14 +13,9 @@ import com.it114.android.oneframework.sample1.R;
  */
 public class TitleBarActivity extends BaseActivity implements TitleBarListener {
 
-    @Bind(R.id.layout_title_bar)
-    View titleBar;
-
-    private TitleBarViewImpl titleBarView;
     @Override
     protected void init(Bundle savedInstanceState) {
-        titleBarView = new TitleBarViewImpl(this,titleBar);
-        titleBarView.setTitleBarListener(this);
+       initTitleBar(R.id.layout_title_bar,null);
     }
 
     @Override

@@ -48,15 +48,27 @@
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text=" 超简适配器 "
+            android:text=" titleBar "
+            android:id="@+id/btnTitlebar"
             />
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text=" titleBar "
-            android:id="@+id/btnTitlebar"
+            android:text=" fragment "
+            android:id="@+id/fragment"
             />
-
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" 超简适配器 adapter "
+            android:id="@+id/adapter"
+            />
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" simple webveiew  "
+            android:id="@+id/webview"
+            />
 </LinearLayout>
 </ScrollView>
 

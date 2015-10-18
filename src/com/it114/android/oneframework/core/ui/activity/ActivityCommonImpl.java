@@ -5,7 +5,7 @@ import android.os.Bundle;
 /**
  *
  */
-public class ActivityStateImpl implements ActivityCommon {
+public class ActivityCommonImpl implements ActivityCommon {
     ACTIVITY_STATE activityState = ACTIVITY_STATE.IDLE;
 
     @Override

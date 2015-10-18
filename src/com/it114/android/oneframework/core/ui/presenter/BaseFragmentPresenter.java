@@ -18,6 +18,7 @@ public abstract class BaseFragmentPresenter extends Presenter{
 
     public void detach() {
         mContext = null;
+        destroy();
     }
 
     protected ActivityCommon.ACTIVITY_STATE getActivityState() {

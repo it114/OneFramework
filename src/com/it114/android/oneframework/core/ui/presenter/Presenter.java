@@ -25,6 +25,11 @@ public class Presenter {
         initDoInBackground();
     }
 
+    protected void destroy(){
+        // avoid memory leak
+        handler.removeCallbacksAndMessages(null);
+    }
+
     /**
      * 数据初始化，在UI线程运行
      */
@@ -58,5 +63,6 @@ public class Presenter {
     protected void doTaskFinish(){
 
     }
+
 
 }

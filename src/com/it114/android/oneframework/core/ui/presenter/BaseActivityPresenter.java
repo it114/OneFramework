@@ -16,6 +16,8 @@ public abstract class BaseActivityPresenter extends Presenter {
 
     public void onResume(){}
 
-    public void onDestroy(){}
+    public void onDestroy(){
+        destroy();
+    }
 
 }
