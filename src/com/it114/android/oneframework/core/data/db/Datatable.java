@@ -67,5 +67,5 @@ public abstract class Datatable implements BaseColumns {
     abstract public String getTableName();
     abstract protected Map<String, String> getTableMap();
 
-    //abstract protected ContentValues toContentValues(BaseModel model);
+    //abstract protected ContentValues toContentValues(BaseBean model);
 }

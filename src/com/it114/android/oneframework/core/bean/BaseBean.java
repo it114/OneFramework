@@ -1,8 +1,6 @@
-package com.it114.android.oneframework.core.model;
+package com.it114.android.oneframework.core.bean;
 
 import android.widget.Toast;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.it114.android.oneframework.core.OneApplication;
 import com.it114.android.oneframework.core.R;
 import org.json.JSONObject;
@@ -17,7 +15,7 @@ import java.io.Serializable;
  * 不是如上格式的请自行根据您的格式来写基类的解析
  *
  */
-public  abstract class BaseModel implements Serializable {
+public  abstract class BaseBean implements Serializable {
     private static final long serialVersionUID = 2015082101L;
     public String msg="";
     public int code;

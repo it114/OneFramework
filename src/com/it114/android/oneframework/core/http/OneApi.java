@@ -3,9 +3,8 @@ package com.it114.android.oneframework.core.http;
 import com.it114.android.oneframework.core.OneApplication;
 import com.it114.android.oneframework.core.data.Config;
 import com.it114.android.oneframework.core.data.cache.HttpCacheManager;
-import com.it114.android.oneframework.core.model.BaseModel;
-import com.it114.android.oneframework.core.model.DataModel;
-import com.it114.android.oneframework.core.model.HttpCache;
+import com.it114.android.oneframework.core.bean.DataBean;
+import com.it114.android.oneframework.core.bean.HttpCache;
 import com.it114.android.oneframework.core.util.LogUtil;
 import com.it114.android.oneframework.core.util.NetUtil;
 import com.loopj.android.http.AsyncHttpClient;
@@ -67,7 +66,7 @@ public class OneApi {
      * @param params 访问参数
      * @param handler
      */
-    public static void get(boolean useCache,long cacheTime,String url,RequestParams params, final HttpRequestHandler  handler, final DataModel dataModel){
+    public static void get(boolean useCache,long cacheTime,String url,RequestParams params, final HttpRequestHandler  handler, final DataBean dataModel){
         HttpCache cache = null;
         if(useCache) {
             cache = HttpCacheManager.get(url, params);

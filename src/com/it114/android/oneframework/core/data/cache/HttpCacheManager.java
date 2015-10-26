@@ -1,7 +1,7 @@
 package com.it114.android.oneframework.core.data.cache;
 
 import com.it114.android.oneframework.core.data.db.HttpCacheTable;
-import com.it114.android.oneframework.core.model.HttpCache;
+import com.it114.android.oneframework.core.bean.HttpCache;
 import com.it114.android.oneframework.core.util.CacheUtil;
 
 import com.loopj.android.http.RequestParams;

@@ -13,13 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.it114.android.oneframework.core.ui.widget.adapter;
+package com.it114.android.oneframework.core.adapter;
 
-/**
- * 万能Adapter，查看KJAdapter
- * 
- * @author kymjs(http://www.kymjs.com/)
- */
 
 import android.graphics.Bitmap;
 import android.util.SparseArray;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.it114.android.oneframework.core.ui.widget.adapter;
+package com.it114.android.oneframework.core.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -33,7 +33,7 @@ import java.util.Set;
  * ÐÞ¸Ä×Ô kymjs
  *
  */
-public abstract class OneAdapter<T> extends BaseAdapter implements AbsListView.OnScrollListener {
+public abstract class CommonAdapter<T> extends BaseAdapter implements AbsListView.OnScrollListener {
     protected Collection<T> mDatas;
     protected final int mItemLayoutId;
     protected AbsListView mList;
@@ -41,7 +41,7 @@ public abstract class OneAdapter<T> extends BaseAdapter implements AbsListView.O
     protected Context mCxt;
     protected LayoutInflater mInflater;
     private AbsListView.OnScrollListener listener;
-    public OneAdapter(AbsListView view, Collection<T> mDatas, int itemLayoutId) {
+    public CommonAdapter(AbsListView view, Collection<T> mDatas, int itemLayoutId) {
         if (mDatas == null) {
             mDatas = new ArrayList<T>(0);
         }

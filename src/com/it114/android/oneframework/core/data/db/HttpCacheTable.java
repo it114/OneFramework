@@ -2,9 +2,8 @@ package com.it114.android.oneframework.core.data.db;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.it114.android.oneframework.core.model.BaseModel;
-import com.it114.android.oneframework.core.model.HttpCache;
-import com.it114.android.oneframework.core.util.CacheUtil;
+import com.it114.android.oneframework.core.bean.BaseBean;
+import com.it114.android.oneframework.core.bean.HttpCache;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -38,7 +37,7 @@ public class HttpCacheTable extends Datatable {
 		return mColumnMap;
 	}
 
-	public static ContentValues toContentValues(BaseModel model) {
+	public static ContentValues toContentValues(BaseBean model) {
 		HttpCache httpCache = (HttpCache) model;
 		ContentValues values = new ContentValues();
 		values.put(COLOMN_KEY,httpCache.key);
