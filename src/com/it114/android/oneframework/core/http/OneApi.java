@@ -30,7 +30,7 @@ public class OneApi {
             //String content = HttpCacheManager.get(url,params);
             return;
         }
-        LogUtil.d(TAG, params.toString());
+        LogUtil.d(TAG, url+params.toString());
         getHttpClient().get(OneApplication.getInstance().getInstance(), url, params, responseHandler);
     }
 

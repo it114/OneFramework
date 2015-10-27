@@ -34,7 +34,6 @@ public class LoginActivity  extends BaseFragmentActivity implements LoginView{
 
     @Override
     protected int getLayoutId() {
-
         loginPresenter = new LoginPresenterImpl(this);
         return R.layout.login_activity_layout;
     }

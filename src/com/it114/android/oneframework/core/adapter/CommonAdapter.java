@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, å¼ æ¶›.
+ * Copyright (c) 2014, å¯®çŠ³ç¨•.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,9 +28,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * ¶ÔViewHolderµÄ·â×°£¬ÒÔ¼°¸ü·½±ãµÄ¿ØÖÆListView»¬¶¯¹ı³ÌÖĞ²»¼ÓÔØÍ¼Æ¬
+ * å¯¹ViewHolderçš„å°è£…ï¼Œä»¥åŠæ›´æ–¹ä¾¿çš„æ§åˆ¶ListViewæ»‘åŠ¨è¿‡ç¨‹ä¸­ä¸åŠ è½½å›¾ç‰‡
  *
- * ĞŞ¸Ä×Ô kymjs
+ * ä¿®æ”¹è‡ª kymjs
  *
  */
 public abstract class CommonAdapter<T> extends BaseAdapter implements AbsListView.OnScrollListener {
@@ -97,15 +97,15 @@ public abstract class CommonAdapter<T> extends BaseAdapter implements AbsListVie
         return AdapterHolder.get(convertView, parent, mItemLayoutId, position);
     }
 
-    public abstract void convert(AdapterHolder helper, T item,boolean isScrolling);
+    public abstract void convert(int position,AdapterHolder helper, T item,boolean isScrolling);
 
     public void convert(AdapterHolder helper, T item, boolean isScrolling, int position) {
-        convert(helper, getItem(position), isScrolling);
+        convert(position,helper, getItem(position), isScrolling);
     }
 
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
-        // ÉèÖÃÊÇ·ñ¹ö¶¯µÄ×´Ì¬
+        // è®¾ç½®æ˜¯å¦æ»šåŠ¨çš„çŠ¶æ€
         if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
             isScrolling = false;
             this.notifyDataSetChanged();

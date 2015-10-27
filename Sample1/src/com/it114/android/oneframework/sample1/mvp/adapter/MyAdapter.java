@@ -4,7 +4,7 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 import com.it114.android.oneframework.core.adapter.AdapterHolder;
 import com.it114.android.oneframework.core.adapter.CommonAdapter;
-import com.it114.android.oneframework.core.adapter.OneAdapter;
+import com.it114.android.oneframework.core.adapter.CommonAdapter;
 import com.it114.android.oneframework.sample1.R;
 import com.it114.android.oneframework.sample1.bean.TestBean;
 import com.nostra13.universalimageloader.core.ImageLoader;
