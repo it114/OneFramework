@@ -1,16 +1,15 @@
-package com.it114.android.oneframework.sample1.mvp.main;
+package com.it114.android.oneframework.sample1.demo.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import butterknife.OnClick;
 import com.it114.android.oneframework.core.ui.activity.BaseActivity;
 import com.it114.android.oneframework.sample1.R;
-import com.it114.android.oneframework.sample1.mvp.adapter.AdapterActivity;
-import com.it114.android.oneframework.sample1.mvp.fragment.MyFragment;
-import com.it114.android.oneframework.sample1.mvp.fragment.MyFragmentActivity;
-import com.it114.android.oneframework.sample1.mvp.titlebar.TitleBarActivity;
-import com.it114.android.oneframework.sample1.mvp.webview.WebViewActivity;
+import com.it114.android.oneframework.sample1.demo.adapter.AdapterActivity;
+import com.it114.android.oneframework.sample1.demo.fragment.MyFragmentActivity;
+import com.it114.android.oneframework.sample1.demo.serverrequest.RequestActivity;
+import com.it114.android.oneframework.sample1.demo.titlebar.TitleBarActivity;
+import com.it114.android.oneframework.sample1.demo.webview.WebViewActivity;
 
 /**
  * Created by andy on 10/15/2015.
@@ -49,6 +48,12 @@ public class MainActivity extends BaseActivity {
     public void onWebViewBtnClick(){
         Intent intent = new Intent(this,WebViewActivity.class);
         intent.putExtra("url","http://m.baidu.com");
+        this.startActivity(intent);
+    }
+
+    @OnClick(R.id.http_Request)
+    public void onHttpRequest(){
+        Intent intent = new Intent(this,RequestActivity.class);
         this.startActivity(intent);
     }
 

@@ -29,4 +29,12 @@ public class SafeHandler {
             e.printStackTrace();
         }
     }
+
+    public static  <E> void onFinish(HttpRequestHandler<E> handler){
+        try{
+            handler.onFinish();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

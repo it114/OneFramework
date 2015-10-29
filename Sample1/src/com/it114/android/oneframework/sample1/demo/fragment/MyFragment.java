@@ -1,4 +1,4 @@
-package com.it114.android.oneframework.sample1.mvp.fragment;
+package com.it114.android.oneframework.sample1.demo.fragment;
 
 import com.it114.android.oneframework.core.ui.fragment.SupportFragment;
 import com.it114.android.oneframework.sample1.R;

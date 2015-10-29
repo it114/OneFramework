@@ -69,6 +69,13 @@
             android:text=" simple webveiew  "
             android:id="@+id/webview"
             />
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" http_Request  "
+            android:id="@+id/http_Request"
+            />
 </LinearLayout>
 </ScrollView>
 

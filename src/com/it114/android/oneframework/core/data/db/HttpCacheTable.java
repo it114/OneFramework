@@ -2,6 +2,7 @@ package com.it114.android.oneframework.core.data.db;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import com.it114.android.oneframework.core.OneApplication;
 import com.it114.android.oneframework.core.bean.BaseBean;
 import com.it114.android.oneframework.core.bean.HttpCache;
 
@@ -50,16 +51,16 @@ public class HttpCacheTable extends Datatable {
 
 	public static void insert(HttpCache cache){
 		ContentValues values = toContentValues(cache);
-		dbHelper.insert(TABLE_NAME, values);
+		DBHelper.getInstance(OneApplication.getInstance()).insert(TABLE_NAME, values);
 	}
 
 	public static void update(HttpCache cache){
 		ContentValues values = toContentValues(cache);
-		dbHelper.update(TABLE_NAME, values, "key=?", new String[] {""});
+		DBHelper.getInstance(OneApplication.getInstance()).update(TABLE_NAME, values, "key=?", new String[]{""});
 	}
 
 	public static HttpCache get(String key){
-		Cursor cursor = dbHelper.rawQuery("select * from " + HttpCacheTable.TABLE_NAME + " where " + HttpCacheTable.COLOMN_KEY + "=?", new String[]{key});
+		Cursor cursor = DBHelper.getInstance(OneApplication.getInstance()).rawQuery("select * from " + HttpCacheTable.TABLE_NAME + " where " + HttpCacheTable.COLOMN_KEY + "=?", new String[]{key});
 		if(cursor.moveToFirst()) {
 			long updatetime =cursor.getLong(cursor.getColumnIndex(COLOMN_UPDATETIME));
 			String url =cursor.getString(cursor.getColumnIndex(COLOMN_URL));
@@ -85,7 +86,7 @@ public class HttpCacheTable extends Datatable {
 		calendar.setTime(new Date());
 		calendar.add(Calendar.DAY_OF_MONTH, -days);
 		Date time=calendar.getTime();
-		dbHelper.execSQL("delete from "+TABLE_NAME +" where "+COLOMN_UPDATETIME +" > "+time.getTime());
+		DBHelper.getInstance(OneApplication.getInstance()).execSQL("delete from " + TABLE_NAME + " where " + COLOMN_UPDATETIME + " > " + time.getTime());
 	}
 
 

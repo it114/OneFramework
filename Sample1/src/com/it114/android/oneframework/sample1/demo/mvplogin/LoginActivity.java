@@ -1,18 +1,15 @@
-package com.it114.android.oneframework.sample1.mvp.login;
+package com.it114.android.oneframework.sample1.demo.mvplogin;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.OnClick;
 import com.it114.android.oneframework.core.ui.activity.BaseFragmentActivity;
 import com.it114.android.oneframework.sample1.R;
-import com.it114.android.oneframework.sample1.mvp.main.MainActivity;
+import com.it114.android.oneframework.sample1.demo.main.MainActivity;
 
 /**
  * Created by andy on 10/15/2015.

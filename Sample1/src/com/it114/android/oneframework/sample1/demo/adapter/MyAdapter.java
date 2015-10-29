@@ -1,9 +1,8 @@
-package com.it114.android.oneframework.sample1.mvp.adapter;
+package com.it114.android.oneframework.sample1.demo.adapter;
 
 import android.widget.AbsListView;
 import android.widget.ImageView;
 import com.it114.android.oneframework.core.adapter.AdapterHolder;
-import com.it114.android.oneframework.core.adapter.CommonAdapter;
 import com.it114.android.oneframework.core.adapter.CommonAdapter;
 import com.it114.android.oneframework.sample1.R;
 import com.it114.android.oneframework.sample1.bean.TestBean;
@@ -21,10 +20,12 @@ public class MyAdapter extends CommonAdapter<TestBean> {
     }
 
     @Override
-    public void convert(AdapterHolder helper, TestBean item, boolean isScrolling) {
+    public void convert(int position, AdapterHolder helper, TestBean item, boolean isScrolling) {
         ImageView imgIcon = helper.getView(R.id.img_user_icon);
         ImageLoader.getInstance().displayImage(item.icoImageUrl,imgIcon);
         helper.setText(R.id.tv_username,item.username);
         helper.setText(R.id.tv_singature,item.signature);
     }
+
+
 }

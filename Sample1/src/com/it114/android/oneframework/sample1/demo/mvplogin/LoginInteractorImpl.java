@@ -1,4 +1,4 @@
-package com.it114.android.oneframework.sample1.mvp.login;
+package com.it114.android.oneframework.sample1.demo.mvplogin;
 
 import android.os.Handler;
 import android.text.TextUtils;

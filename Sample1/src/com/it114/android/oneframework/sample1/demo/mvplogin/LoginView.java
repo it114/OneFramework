@@ -1,4 +1,4 @@
-package com.it114.android.oneframework.sample1.mvp.login;
+package com.it114.android.oneframework.sample1.demo.mvplogin;
 
 /**
  * Created by andy on 10/15/2015.

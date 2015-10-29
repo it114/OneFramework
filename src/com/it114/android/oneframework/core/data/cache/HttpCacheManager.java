@@ -4,6 +4,7 @@ import com.it114.android.oneframework.core.data.db.HttpCacheTable;
 import com.it114.android.oneframework.core.bean.HttpCache;
 import com.it114.android.oneframework.core.util.CacheUtil;
 
+import com.it114.android.oneframework.core.util.LogUtil;
 import com.loopj.android.http.RequestParams;
 
 public class HttpCacheManager {
@@ -13,7 +14,8 @@ public class HttpCacheManager {
 		if(lastCache !=null) {
 			lastCache.content = content;
 			lastCache.updateTime = System.currentTimeMillis();
-			HttpCacheTable.insert(lastCache);
+			LogUtil.d(null,url+" cache updated last cache is not null !");
+			HttpCacheTable.update(lastCache);
 		} else {
 			HttpCache cache=new HttpCache();
 			cache.key = CacheUtil.makeKey(url, params);
@@ -22,6 +24,7 @@ public class HttpCacheManager {
 			cache.url = url;
 			cache.updateTime = System.currentTimeMillis();
 			HttpCacheTable.insert(cache);
+			LogUtil.d(null,url+" cache inserted last cache is  null !");
 		}
 	}
 

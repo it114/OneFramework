@@ -21,7 +21,6 @@ public abstract class Datatable implements BaseColumns {
         }
     }
 
-
     public static void unRegisterSubClass(String fullClassName){
         synchronized (subclassLock){
             SUBCLASSES.remove(fullClassName);

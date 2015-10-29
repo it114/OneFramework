@@ -1,11 +1,9 @@
-package com.it114.android.oneframework.sample1.mvp.titlebar;
+package com.it114.android.oneframework.sample1.demo.titlebar;
 
 import android.os.Bundle;
 import android.view.View;
-import butterknife.Bind;
 import com.it114.android.oneframework.core.ui.activity.BaseActivity;
 import com.it114.android.oneframework.core.ui.widget.titlebar.TitleBarListener;
-import com.it114.android.oneframework.core.ui.widget.titlebar.TitleBarViewImpl;
 import com.it114.android.oneframework.sample1.R;
 
 /**
@@ -22,7 +20,6 @@ public class TitleBarActivity extends BaseActivity implements TitleBarListener {
     protected int getLayoutId() {
         return R.layout.titlebar_activity_layout;
     }
-
 
     @Override
     public void onRightImgBtnClick(View view) {

@@ -29,6 +29,7 @@ public class OneApplication extends Application  {
     @Override
     public void onCreate() {
         super.onCreate();
+        Config.debug = true;
         INSTANCE = this;
         initImageLoader();
     }
@@ -60,7 +61,6 @@ public class OneApplication extends Application  {
                 .cacheOnDisc(true)
                 .displayer(new FadeInBitmapDisplayer(200))
                 .build();
-
         File cacheDir = new File(FileUtil.getCacheDir().getAbsolutePath() + "/" + Constants.IMAGE_CACHE_DIR);
         ImageLoaderConfiguration.Builder configBuilder = null;
         try {

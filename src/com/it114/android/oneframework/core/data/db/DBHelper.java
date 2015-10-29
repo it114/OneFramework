@@ -42,6 +42,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	}
 
 	public void operateTable(SQLiteDatabase db, String actionString) {
+		Datatable.registerSubClass(HttpCacheTable.class.getName());
 		Class<Datatable>[] columnsClasses = Datatable.getSubClasses();
 		Datatable columns = null;
 		for (int i = 0; i < columnsClasses.length; i++) {

@@ -9,15 +9,4 @@ public class HttpCache extends BaseBean {
 	public String params;//请求参数
 	public String content;//服务器返回数据
 	public Long updateTime;//更新时间
-
-
-	@Override
-	public boolean parseSuc() {
-		return false;
-	}
-
-	@Override
-	void parseModel(JSONObject object) throws Exception {
-
-	}
 }

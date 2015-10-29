@@ -1,4 +1,4 @@
-package com.it114.android.oneframework.sample1.mvp.webview;
+package com.it114.android.oneframework.sample1.demo.webview;
 
 import android.graphics.Color;
 import android.os.Bundle;

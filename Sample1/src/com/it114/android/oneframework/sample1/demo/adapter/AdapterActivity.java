@@ -1,4 +1,4 @@
-package com.it114.android.oneframework.sample1.mvp.adapter;
+package com.it114.android.oneframework.sample1.demo.adapter;
 
 import android.os.Bundle;
 import android.widget.ListView;

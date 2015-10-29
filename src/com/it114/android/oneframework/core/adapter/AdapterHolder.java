@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, å¼ æ¶›.
+ * Copyright (c) 2014, å¯®çŠ³ç¨•.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ public class AdapterHolder {
     }
 
     /**
-     * ÄÃµ½È«²¿View
+     * æ‹¿åˆ°å…¨éƒ¨View
      *
      * @return
      */
@@ -47,7 +47,7 @@ public class AdapterHolder {
     }
 
     /**
-     * ÄÃµ½Ò»¸öViewHolder¶ÔÏó
+     * æ‹¿åˆ°ä¸€ä¸ªViewHolderå¯¹è±¡
      *
      * @param convertView
      * @param parent
@@ -68,7 +68,7 @@ public class AdapterHolder {
     }
 
     /**
-     * Í¨¹ı¿Ø¼şµÄId»ñÈ¡¶ÔÓÚµÄ¿Ø¼ş£¬Èç¹ûÃ»ÓĞÔò¼ÓÈëviews
+     * é€šè¿‡æ§ä»¶çš„Idè·å–å¯¹äºçš„æ§ä»¶ï¼Œå¦‚æœæ²¡æœ‰åˆ™åŠ å…¥views
      *
      * @param viewId
      * @return
@@ -84,7 +84,7 @@ public class AdapterHolder {
     }
 
     /**
-     * ÎªTextViewÉèÖÃ×Ö·û´®
+     * ä¸ºTextViewè®¾ç½®å­—ç¬¦ä¸²
      *
      * @param viewId
      * @param text
@@ -97,7 +97,7 @@ public class AdapterHolder {
     }
 
     /**
-     * ÎªImageViewÉèÖÃÍ¼Æ¬
+     * ä¸ºImageViewè®¾ç½®å›¾ç‰‡
      *
      * @param viewId
      * @param drawableId
@@ -111,7 +111,7 @@ public class AdapterHolder {
     }
 
     /**
-     * ÎªImageViewÉèÖÃÍ¼Æ¬
+     * ä¸ºImageViewè®¾ç½®å›¾ç‰‡
      *
      * @param viewId
      * @param bm
