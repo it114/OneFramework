@@ -10,3 +10,7 @@ http://jakewharton.github.io/butterknife/ide-idea.html
 
 
 原则，框架编写的时候 一定不要用 butterKnife ，一定自己手动找到相关的控件！用户可实用butterKnife
+
+
+
+https://github.com/Piasy/AndroidTDDBootStrap
